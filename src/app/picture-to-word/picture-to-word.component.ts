@@ -113,8 +113,9 @@ export class PictureToWordComponent {
   checkWord(word: string) {
     if (this.word == word) {
       this.completeLevel()
+    } else {
+      this.wrongWord = word;
     }
-    this.wrongWord = word;
   }
 
   completeLevel() {

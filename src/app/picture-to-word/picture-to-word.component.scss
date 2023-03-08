@@ -13,14 +13,21 @@
   font-size: 24px;
   height: 100vh;
   max-width: 1400px;
+  gap: 50px;
 
   .image-container {
-    width: 50%;
-    padding: 0 50px;
+    width: 400px;
+    padding: 20px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
+    //border: 3px solid rgb(175, 175, 175);
 
+    box-shadow: inset -9px -8px 20px rgb(0 0 0 / 10%);
+    transform: matrix3d(1, 0, 0, 0.0001, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+
+    border-radius: 90px;
     img {
       width: 90%;
     }

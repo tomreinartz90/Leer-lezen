@@ -79,7 +79,13 @@
     flex-direction: column;
 
     .image-container {
-      max-width: 80vw;
+      max-height: 60vw;
+      max-width: 70vw;
+    }
+
+    .button-container {
+      width: 100%;
+      max-width: 70vw;
     }
   }
 

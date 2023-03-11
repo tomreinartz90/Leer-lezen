@@ -6,6 +6,7 @@
   width: 100%;
 }
 
+
 .container {
   display: flex;
   justify-content: center;
@@ -35,8 +36,39 @@
     }
   }
 
+  .word-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    &__letter {
+      background-color: #fff;
+      padding: 10px;
+      font-size: 50px;
+
+      &--hidden {
+        color: #fff;
+      }
+    }
+  }
+
   .button-container {
-    width: 300px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    app-button {
+      width: 40px;
+      font-size: 40px;
+      padding: 6px 16px 10px;
+    }
+  }
+
+  .choice-container {
+    width: 420px;
     max-width: 40vw;
 
     display: flex;
@@ -78,9 +110,9 @@
       max-width: 70vw;
     }
 
-    .button-container {
+    .choice-container {
       width: 100%;
-      max-width: 70vw;
+      max-width: 80vw;
     }
   }
 

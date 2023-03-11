@@ -1,0 +1,70 @@
+@keyframes slideInRight {
+  0% {
+    transform: translateX(120vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.level-container {
+  max-width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 100px;
+  opacity: 1;
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out;
+  //transform: scale(1);
+
+  &--hidden {
+    opacity: 0;
+    //transform: scale(4);
+  }
+
+  .level {
+
+    width: 120px;
+    height: 120px;
+
+    background: linear-gradient(180deg, #E3F7FF 0%, #F3F2FF 100%);
+    border-width: 10px 12px 15px 10px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--locked {
+
+    }
+
+    .level-number {
+      font-size: 48px;
+      font-family: 'Bree Serif', serif;
+    }
+
+    .level-locked {
+
+    }
+  }
+}
+
+.game-container {
+  animation: slideInRight .8s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+}

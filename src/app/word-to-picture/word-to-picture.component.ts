@@ -1,17 +1,15 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {IMAGES} from "../images.data";
-import {nlNL} from "../words-nlNL.data";
-import {ArrayUtil} from "../array.util";
 import {WordUtil} from "../word.util";
 import {NumberUtil} from "../number.util";
+import {ArrayUtil} from "../array.util";
 
 @Component({
-  selector: 'app-picture-to-word',
-  templateUrl: './picture-to-word.component.html',
-  styleUrls: ['./picture-to-word.component.scss']
+  selector: 'app-word-to-picture',
+  templateUrl: './word-to-picture.component.html',
+  styleUrls: ['./word-to-picture.component.scss']
 })
-export class PictureToWordComponent {
-
+export class WordToPictureComponent {
   @Input()
   category: keyof typeof IMAGES = "animals";
 
@@ -22,14 +20,14 @@ export class PictureToWordComponent {
   locale: string = "nlNL";
 
   @Output()
-  completedLevel:EventEmitter<any> = new EventEmitter()
+  completedLevel: EventEmitter<any> = new EventEmitter()
 
   @Output()
-  quitLevel:EventEmitter<any> = new EventEmitter()
+  quitLevel: EventEmitter<any> = new EventEmitter()
   word: string = "";
   lastWord: string = "";
   image: string = "";
-  wordOptions: string[] = [];
+  wordOptions: Array<{ word: string, image: string }> = [];
 
   correctWords: number = 0;
 
@@ -66,10 +64,13 @@ export class PictureToWordComponent {
       nrOfOptions = 5;
     }
     const translatedWordsIncategory: any = WordUtil.getTranslatedWords(this.locale as any)[this.category];
-    const uniqueWords = ArrayUtil.uniqueArray(words.map(word => translatedWordsIncategory[word])).filter(word => word != this.word);
-    this.wordOptions = ArrayUtil.shuffleArray([...uniqueWords.slice(0, nrOfOptions - 1), this.word]);
+    const uniqueWords = ArrayUtil.uniqueArray(words.filter(word => translatedWordsIncategory[word] != this.word))
+      .map(word => ({word: translatedWordsIncategory[word], image: (IMAGES as any)[this.category][word]}));
+    this.wordOptions = ArrayUtil.shuffleArray([...uniqueWords.slice(0, nrOfOptions - 1), {
+      word: this.word,
+      image: this.image
+    }]);
   }
-
 
 
   checkWord(word: string) {
@@ -99,6 +100,4 @@ export class PictureToWordComponent {
       this.setWordAndImage();
     }, 2000);
   }
-
-
 }

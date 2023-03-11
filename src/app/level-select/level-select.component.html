@@ -1,0 +1,31 @@
+<div class="level-container" [class.level-container--hidden]="selectedLevel">
+  <div class="level" *ngFor="let level of levels; let index = index"
+       (click)="selectLevel(level, index)"
+       [class.level--locked]="index > currentLevel">
+    <div *ngIf="index <= currentLevel" class="level-number">{{index}}</div>
+    <div *ngIf="index > currentLevel" class="level-locked">
+      <svg width="43" height="57" viewBox="0 0 43 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path opacity="0.6" d="M4.1665 56.1667C3.05539 56.1667 2.11095 55.7779 1.33317 55.0001C0.555393 54.2223 0.166504 53.2779 0.166504 52.1667V23.2334C0.166504 22.1223 0.555393 21.1779 1.33317 20.4001C2.11095 19.6223 3.05539 19.2334 4.1665 19.2334H8.83317V12.8334C8.83317 9.3223 10.0665 6.33342 12.5332 3.86675C14.9998 1.40008 17.9887 0.166748 21.4998 0.166748C25.011 0.166748 27.9998 1.40008 30.4665 3.86675C32.9332 6.33342 34.1665 9.3223 34.1665 12.8334V19.2334H38.8332C39.9443 19.2334 40.8887 19.6223 41.6665 20.4001C42.4443 21.1779 42.8332 22.1223 42.8332 23.2334V52.1667C42.8332 53.2779 42.4443 54.2223 41.6665 55.0001C40.8887 55.7779 39.9443 56.1667 38.8332 56.1667H4.1665ZM21.4998 42.8334C22.9221 42.8334 24.1332 42.3445 25.1332 41.3668C26.1332 40.389 26.6332 39.2112 26.6332 37.8334C26.6332 36.5001 26.1332 35.289 25.1332 34.2001C24.1332 33.1112 22.9221 32.5667 21.4998 32.5667C20.0776 32.5667 18.8665 33.1112 17.8665 34.2001C16.8665 35.289 16.3665 36.5001 16.3665 37.8334C16.3665 39.2112 16.8665 40.389 17.8665 41.3668C18.8665 42.3445 20.0776 42.8334 21.4998 42.8334ZM12.8332 19.2334H30.1665V12.8334C30.1665 10.4334 29.3221 8.38897 27.6332 6.70008C25.9443 5.01119 23.8998 4.16675 21.4998 4.16675C19.0998 4.16675 17.0554 5.01119 15.3665 6.70008C13.6776 8.38897 12.8332 10.4334 12.8332 12.8334V19.2334Z" fill="#8E8E8E"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="game-container" *ngIf="selectedLevel">
+
+  <app-picture-to-word *ngIf="selectedLevel.levelType == 'picture-to-word'"
+                       (completedLevel)="onCompleteLevel(selectedLevelIndex)"
+                       (quitLevel)="selectedLevel = null"
+                       [difficulty]="selectedLevel.difficulty"></app-picture-to-word>
+
+  <app-missing-letters *ngIf="selectedLevel.levelType == 'missingLetters'"
+                       (completedLevel)="onCompleteLevel(selectedLevelIndex)"
+                       (quitLevel)="selectedLevel = null"
+                       [difficulty]="selectedLevel.difficulty"></app-missing-letters>
+
+  <app-word-to-picture *ngIf="selectedLevel.levelType == 'wordToPicture'"
+                       (completedLevel)="onCompleteLevel(selectedLevelIndex)"
+                       (quitLevel)="selectedLevel = null"
+                       [difficulty]="selectedLevel.difficulty"></app-word-to-picture>
+
+</div>

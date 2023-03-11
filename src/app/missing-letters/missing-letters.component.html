@@ -1,0 +1,24 @@
+<app-level-header (quitLevel)="quitLevel.emit(true)" heading="Welke letter mist in dit woord?"></app-level-header>
+<div class="container">
+  <div class="image-container">
+    <img src="assets/{{category}}/{{image}}">
+  </div>
+  <div class="choice-container">
+    <div class="word-container">
+      <div class="word-container__letter"
+           *ngFor="let letter of wordAsList; let i = index"
+           [class.word-container__letter--hidden]="i == hiddenLetterIndex">
+        {{letter}}
+      </div>
+    </div>
+    <div class="button-container">
+      <app-button *ngFor="let option of letterOptions"
+                  [success]="complete && option == this.hiddenLetter"
+                  [alert]="option == this.wrongLetter"
+                  (click)="checkLetter(option)">{{option}}</app-button>
+    </div>
+  </div>
+  <div class="complete-overlay" [class.hidden]="!complete">
+    <img src="assets/complete%20-%20banner.png">
+  </div>
+</div>

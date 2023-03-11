@@ -1,0 +1,17 @@
+<app-level-header (quitLevel)="quitLevel.emit(true)" heading="Op welk plaatje zie je dit woord?"></app-level-header>
+<div class="container">
+  <div class="word-container">
+    {{word}}
+  </div>
+  <div class="button-container">
+    <app-button *ngFor="let option of wordOptions"
+                [success]="complete && option.word == word"
+                [alert]="option.word == this.wrongWord"
+                (click)="checkWord(option.word)">
+      <img src="assets/{{category}}/{{option.image}}">
+    </app-button>
+  </div>
+  <div class="complete-overlay" [class.hidden]="!complete">
+    <img src="assets/complete%20-%20banner.png">
+  </div>
+</div>

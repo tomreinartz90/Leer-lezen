@@ -6,10 +6,25 @@
   width: 100%;
 }
 
+.heading {
+  display: flex;
+  width: 100%;
+  gap: 32px;
+  align-items: center;
+
+  h2 {
+    font-size: 28px;
+    font-family: 'Bree Serif', serif;
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   font-family: 'Bree Serif', serif;
   text-transform: lowercase;
   font-size: 24px;
@@ -18,30 +33,33 @@
   max-width: 1400px;
   gap: 50px;
 
-  .image-container {
-    width: 400px;
-    max-width: 40vw;
-    padding: 20px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    box-shadow: inset -9px -8px 20px rgb(0 0 0 / 10%);
-    transform: matrix3d(1, 0, 0, 0.0001, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-
-    border-radius: 90px;
-    img {
-      width: 90%;
-    }
+  .word-container {
+    padding: 20px 50px;
+    font-size: 38px;
+    font-family: 'Bree Serif', serif;
+    background: #FFFFFF;
+    border-radius: 20px;
   }
 
+
   .button-container {
-    width: 300px;
-    max-width: 40vw;
+    max-width: 70vw;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 16px;
+
+    app-button {
+      width: 200px;
+    }
+
+    img {
+      width: 150px;
+      height: auto;
+    }
   }
 
   .complete-overlay {
@@ -73,14 +91,9 @@
   .container {
     flex-direction: column;
 
-    .image-container {
-      max-height: 60vw;
-      max-width: 70vw;
-    }
-
     .button-container {
-      width: 100%;
-      max-width: 70vw;
+      width: fit-content;
+      max-width: calc(100vw - 40px);
     }
   }
 

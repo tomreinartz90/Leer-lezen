@@ -83,7 +83,6 @@ export class MissingLettersComponent {
   }
 
   getNumberOfOptions() {
-    return 7;
     switch (this.difficulty) {
       case 1:
       case 2:

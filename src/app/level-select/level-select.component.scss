@@ -44,6 +44,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     &--locked {
 
     }
@@ -66,5 +67,31 @@
   left: 0;
   bottom: 0;
   right: 0;
+}
 
+
+@media (max-width: 400px) {
+  .level-container {
+    max-width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+    .level {
+
+      width: 80px;
+      height: 80px;
+
+      &--locked {
+
+      }
+
+      .level-number {
+        font-size: 38px;
+        font-family: 'Bree Serif', serif;
+      }
+
+      .level-locked {
+
+      }
+    }
+  }
 }

@@ -16,16 +16,19 @@
   <app-picture-to-word *ngIf="selectedLevel.levelType == 'picture-to-word'"
                        (completedLevel)="onCompleteLevel(selectedLevelIndex)"
                        (quitLevel)="selectedLevel = null"
+                       [category]="selectedLevel.category"
                        [difficulty]="selectedLevel.difficulty"></app-picture-to-word>
 
   <app-missing-letters *ngIf="selectedLevel.levelType == 'missingLetters'"
                        (completedLevel)="onCompleteLevel(selectedLevelIndex)"
                        (quitLevel)="selectedLevel = null"
+                       [category]="selectedLevel.category"
                        [difficulty]="selectedLevel.difficulty"></app-missing-letters>
 
   <app-word-to-picture *ngIf="selectedLevel.levelType == 'wordToPicture'"
                        (completedLevel)="onCompleteLevel(selectedLevelIndex)"
                        (quitLevel)="selectedLevel = null"
+                       [category]="selectedLevel.category"
                        [difficulty]="selectedLevel.difficulty"></app-word-to-picture>
 
 </div>

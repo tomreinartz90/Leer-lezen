@@ -10,11 +10,11 @@ export class LevelSelectComponent {
 
   levels = LEVELS;
 
-  selectedLevel: { levelType: levelType; difficulty: number } | null = null;
+  selectedLevel: typeof LEVELS[0] | null = null;
   selectedLevelIndex: number | null = null;
 
   get currentLevel() {
-    return parseInt(window.sessionStorage.getItem('currentLevel') || "0");
+    return 1000 || parseInt(window.sessionStorage.getItem('currentLevel') || "0");
   }
 
   onCompleteLevel(level: number | null) {
@@ -27,7 +27,7 @@ export class LevelSelectComponent {
     this.selectedLevelIndex = levelIndex + 1;
   }
 
-  selectLevel(level: { levelType: levelType; difficulty: number }, index: number) {
+  selectLevel(level: typeof LEVELS[0], index: number) {
     if (index <= this.currentLevel) {
       this.selectedLevel = level;
       this.selectedLevelIndex = index;

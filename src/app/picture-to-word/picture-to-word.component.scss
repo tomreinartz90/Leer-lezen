@@ -13,7 +13,8 @@
   font-family: 'Bree Serif', serif;
   text-transform: lowercase;
   font-size: 24px;
-  height: calc(100vh - 85px);
+  height: calc(100vh - 155px);
+  overflow: auto;
   width: 100%;
   max-width: 1400px;
   gap: 50px;
@@ -74,7 +75,6 @@
     flex-direction: column;
 
     .image-container {
-      max-height: 30px;
       max-width: 70vw;
     }
 

@@ -11,6 +11,9 @@ export class WordUtil {
   }
   static calculateDifficulty(word: string) {
     console.log(word);
+    if(!word || word == "") {
+      return 100;
+    }
     let difficulty = 0;
     // increase difficulty on basis of length;
     switch (word.length) {

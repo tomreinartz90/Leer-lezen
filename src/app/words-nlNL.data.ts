@@ -51,7 +51,7 @@ export const nlNL = {
     "Wolf": "Wolf",
     "Zebra": "Zebra"
   },
-  "fruits": {
+  "food": {
     "Avocado": "Avocado",
     "Coconut cut": "Kokosnoot",
     "Lemon": "Citroen",
@@ -59,7 +59,22 @@ export const nlNL = {
     "Peach": "Perzik",
     "Pear": "Peer",
     "Pomegranate": "Granaatappel",
-    "Red Apple": "Rode appel"
+    "Red Apple": "appel",
+    "cherry": "kers",
+    "pepper": "peper",
+    "pizza": "pizza",
+    "strawberry": "aardbei",
+    "watermelon": "watermeloen",
+    "donut": "donut",
+    "icecream": "ijsje",
+    "Carrot": "Wortel",
+    "Eggplant": "Aubergine",
+    "Pepper": "Peper",
+    "Potato": "Aardappel",
+    "Red onion": "Rode ui",
+    "Tomato": "Tomaat",
+    "Corn": "Сorn",
+    "Cucumber": "Komkommer"
   },
   "furniture": {
     "Armchair": "Fauteuil",
@@ -78,16 +93,6 @@ export const nlNL = {
     "Stool": "Kruk",
     "Table": "Tafel",
     "Wardrobe": "Kledingkast"
-  },
-  "vegetables": {
-    "Carrot": "Wortel",
-    "Eggplant": "Aubergine",
-    "Pepper": "Peper",
-    "Potato": "Aardappel",
-    "Red onion": "Rode ui",
-    "Tomato": "Tomaat",
-    "Corn": "Сorn",
-    "Cucumber": "Komkommer"
   },
   "weather": {
     "clear-day": "heldere dag",

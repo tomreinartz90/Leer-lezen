@@ -15,14 +15,16 @@
   font-family: 'Bree Serif', serif;
   text-transform: lowercase;
   font-size: 24px;
-  //height: calc(100vh - 85px);
+  height: calc(100vh - 155px);
+  overflow: auto;
+
   width: 100%;
   max-width: 1400px;
   gap: 50px;
 
   .word-container {
     padding: 20px 50px;
-    font-size: 38px;
+    font-size: 45px;
     font-family: 'Bree Serif', serif;
     background: #FFFFFF;
     border-radius: 20px;
@@ -37,14 +39,14 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 30px;
 
     app-button {
-      width: 200px;
+      width: 13vw;
     }
 
     img {
-      width: 150px;
+      width: 100%;
       height: auto;
     }
   }
@@ -81,6 +83,10 @@
     .button-container {
       width: fit-content;
       max-width: calc(100vw - 40px);
+
+      app-button {
+        width: 22vw;
+      }
     }
   }
 

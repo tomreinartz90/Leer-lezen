@@ -51,7 +51,7 @@ export const IMAGES = {
     "Wolf": "Property 1=Wolf.png",
     "Zebra": "Property 1=Zebra.png"
   },
-  "fruits": {
+  "food": {
     "Avocado": "Property 1=Avocado.png",
     "Coconut cut": "Property 1=Coconut cut.png",
     "Lemon": "Property 1=Lemon.png",
@@ -59,7 +59,22 @@ export const IMAGES = {
     "Peach": "Property 1=Peach.png",
     "Pear": "Property 1=Pear.png",
     "Pomegranate": "Property 1=Pomegranate.png",
-    "Red Apple": "Property 1=Red Apple.png"
+    "Red Apple": "Property 1=Red Apple.png",
+    "Carrot": "Property 1=Carrot.png",
+    "Eggplant": "Property 1=Eggplant.png",
+    "Pepper": "Property 1=Pepper.png",
+    "Potato": "Property 1=Potato.png",
+    "Red onion": "Property 1=Red onion.png",
+    "Tomato": "Property 1=Tomato.png",
+    "Сorn": "Property 1=Сorn.png",
+    "Сucumber": "Property 1=Сucumber.png",
+    "cherry" : "cherry.svg",
+    "pepper" : "pepper.svg",
+    "pizza" : "pizza.svg",
+    "strawberry" : "strawberry.svg",
+    "watermelon" : "watermelon.svg",
+    "donut" : "donut.svg",
+    "icecream" : "icecream.svg",
   },
   "furniture": {
     "Armchair": "Property 1=Armchair.png",
@@ -78,16 +93,6 @@ export const IMAGES = {
     "Stool": "Property 1=Stool.png",
     "Table": "Property 1=Table.png",
     "Wardrobe": "Property 1=Wardrobe.png"
-  },
-  "vegetables": {
-   "Carrot": "Property 1=Carrot.png",
-   "Eggplant": "Property 1=Eggplant.png",
-   "Pepper": "Property 1=Pepper.png",
-   "Potato": "Property 1=Potato.png",
-   "Red onion": "Property 1=Red onion.png",
-   "Tomato": "Property 1=Tomato.png",
-   "Сorn": "Property 1=Сorn.png",
-   "Сucumber": "Property 1=Сucumber.png"
   },
   "weather": {
     "clear-day": "Property 1=clear-day.png",
